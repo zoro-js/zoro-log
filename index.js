@@ -21,16 +21,20 @@ const refreshStream = (() => {
         log.stream.end()
       }
       prevName = name
-      const filepath = path.join(process.cwd(), dir, name)
+      // use resolve, so it's ok if dir is absolute
+      const filepath = path.resolve(process.cwd(), dir, name)
       fs.ensureFileSync(filepath)
       log.stream = fs.createWriteStream(filepath, {
         flags: 'a'
+      })
+      log.stream.on('error', err => {
+        log.emit('error', err)
       })
     }
   }
 })()
 
-// config dir for storing logs
+// config dir and filename for storing logs
 exports.config = function (baseDir = defaultDir, filenameFormat = defaultFormat) {
   dir = baseDir
   format = filenameFormat
