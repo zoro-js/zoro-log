@@ -15,7 +15,6 @@ const refreshStream = (() => {
   return function () {
     let name = util.format(new Date(), format) + '.log'
     if (name !== prevName) {
-      debug('refresh stream %s -> %s', prevName, name)
       // stop previous stream, and open new stream
       if (prevName) {
         log.stream.end()
@@ -30,6 +29,7 @@ const refreshStream = (() => {
       log.stream.on('error', err => {
         log.emit('error', err)
       })
+      debug('refresh stream %s', filepath)
     }
   }
 })()
