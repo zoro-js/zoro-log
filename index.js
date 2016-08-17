@@ -1,4 +1,4 @@
-const debug = require('debug')('log')
+const debug = require('debug')('zoro-log')
 const Log = require('log')
 const path = require('path')
 const fs = require('fs-extra')
