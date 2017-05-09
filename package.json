@@ -18,11 +18,11 @@
   "homepage": "https://github.com/zoro-js/zoro-log#readme",
   "dependencies": {
     "debug": "^2.2.0",
-    "fs-extra": "^0.30.0",
+    "fs-extra": "^3.0.1",
     "log": "^1.4.0",
     "zoro-base": "^1.0.18"
   },
   "devDependencies": {
-    "eslint-config-zorojs": "0.0.2"
+    "eslint-config-zorojs": "0.0.10"
   }
 }
