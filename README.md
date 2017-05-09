@@ -1,5 +1,7 @@
 # zoro-log
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/zorojs/zoro-log.svg)](https://greenkeeper.io/)
+
 Lightweight file logging using [log](https://github.com/tj/log.js)
 
 log is an instance of [log](https://github.com/tj/log.js)
